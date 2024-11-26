@@ -1,16 +1,17 @@
-import { Component, Input} from '@angular/core';
+import { Component, input, Input} from '@angular/core';
+import { NgIf } from '@angular/common';
+
 
 @Component({
   selector: 'app-child',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './child.component.html',
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
 
-  // Input()
-  // startCooking: boolean : false;
+ 
   
   @Input()
   numberOfCookies: number = 0;
@@ -26,6 +27,7 @@ export class ChildComponent {
   
   @Input()
   egg: number = 0;
+startCooking: any;
 
 }
 
